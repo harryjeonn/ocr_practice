@@ -29,6 +29,8 @@
 		4AB811C32828DD1F00B4DF4A /* GoogleMLKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMLKitView.swift; sourceTree = "<group>"; };
 		4AB811C52828DD2700B4DF4A /* SwiftOCRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftOCRView.swift; sourceTree = "<group>"; };
 		4AB811C72828DD2F00B4DF4A /* NativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeView.swift; sourceTree = "<group>"; };
+		4AB811CC2828E8FD00B4DF4A /* eng.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = eng.traineddata; sourceTree = "<group>"; };
+		4AB811CD2828E8FD00B4DF4A /* kor.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = kor.traineddata; sourceTree = "<group>"; };
 		568355B746B285BF35348312 /* Pods-OCRTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRTest.debug.xcconfig"; path = "Target Support Files/Pods-OCRTest/Pods-OCRTest.debug.xcconfig"; sourceTree = "<group>"; };
 		9146E64F60DB821CEE051C57 /* Pods_OCRTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCRTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,11 +76,11 @@
 		4AB811B22828AC0200B4DF4A /* OCRTest */ = {
 			isa = PBXGroup;
 			children = (
+				4AB811C92828E89F00B4DF4A /* Tesseract */,
 				4AB811B32828AC0200B4DF4A /* OCRTestApp.swift */,
 				4AB811B52828AC0200B4DF4A /* ContentView.swift */,
 				4AB811B72828AC0300B4DF4A /* Assets.xcassets */,
 				4AB811B92828AC0300B4DF4A /* Preview Content */,
-				4AB811C12828DD1800B4DF4A /* TesseractView.swift */,
 				4AB811C32828DD1F00B4DF4A /* GoogleMLKitView.swift */,
 				4AB811C52828DD2700B4DF4A /* SwiftOCRView.swift */,
 				4AB811C72828DD2F00B4DF4A /* NativeView.swift */,
@@ -94,13 +96,30 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		4AB811C92828E89F00B4DF4A /* Tesseract */ = {
+			isa = PBXGroup;
+			children = (
+				4AB811CB2828E8C000B4DF4A /* TessData */,
+				4AB811C12828DD1800B4DF4A /* TesseractView.swift */,
+			);
+			path = Tesseract;
+			sourceTree = "<group>";
+		};
+		4AB811CB2828E8C000B4DF4A /* TessData */ = {
+			isa = PBXGroup;
+			children = (
+				4AB811CC2828E8FD00B4DF4A /* eng.traineddata */,
+				4AB811CD2828E8FD00B4DF4A /* kor.traineddata */,
+			);
+			path = TessData;
+			sourceTree = "<group>";
+		};
 		69A50EBA5780805D1DE481C7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				568355B746B285BF35348312 /* Pods-OCRTest.debug.xcconfig */,
 				498E523BA2EB5747B5950BD7 /* Pods-OCRTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
