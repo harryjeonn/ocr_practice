@@ -9,8 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            VStack {
+                NavigationLink(destination: TesseractView(), label: {
+                    Text("Tesseract")
+                        .padding()
+                })
+                
+                NavigationLink(destination: GoogleMLKitView(), label: {
+                    Text("GoogleMLKit")
+                        .padding()
+                })
+                
+                NavigationLink(destination: SwiftOCRView(), label: {
+                    Text("SwiftOCR")
+                        .padding()
+                })
+                
+                NavigationLink(destination: NativeView(), label: {
+                    Text("Native")
+                        .padding()
+                })
+            }
+        }
     }
 }
 
