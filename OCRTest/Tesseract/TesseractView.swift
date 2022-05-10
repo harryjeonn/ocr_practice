@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct TesseractView: View {
+    @ObservedObject private var viewModel: TesseractViewModel
+    
+    init() {
+        self.viewModel = TesseractViewModel()
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Spacer()
+            TesseractCameraView(viewModel: viewModel)
+                .onAppear {
+                    viewModel.session.startRunning()
+                }
+                .onDisappear {
+                    viewModel.session.stopRunning()
+                }
+            Spacer()
+            
+            Text(viewModel.result)
+            Spacer()
+        }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
